@@ -1,0 +1,16 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: eureka
+# register-with-eureka  自身并不注册到自身，eureka 是一个服务端，但又是一个客户端.所以需要关闭自注册
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+# server.enable-self-preservation 关闭自我保护，默认为true。 开发环境可以这样设置，生成环境需要设置为true
+  server:
+    enable-self-preservation: false
+logging:
+  path: ./log

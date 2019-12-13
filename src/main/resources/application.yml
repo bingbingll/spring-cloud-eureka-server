@@ -9,7 +9,8 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-# server.enable-self-preservation 关闭自我保护，默认为true。 开发环境可以这样设置，生成环境需要设置为true
+#   service-url: http://172.16.10.1:8092,http://172.16.10.2:8092, #高可用，多个服务相互注册
+#   server.enable-self-preservation 关闭自我保护，默认为true。 开发环境可以这样设置，生成环境需要设置为true
   server:
     enable-self-preservation: false
 logging:
